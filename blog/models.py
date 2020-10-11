@@ -15,6 +15,9 @@ class Publicacion(models.Model):
         self.fecha_publicacion = timezone.now()
         self.save()
 
+    def eliminar(self):
+        self.delete()
+
     def __str__(self):
         return self.titulo
     
